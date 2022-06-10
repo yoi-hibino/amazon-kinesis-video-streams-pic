@@ -13,6 +13,8 @@ extern "C" {
 #include <com/amazonaws/kinesis/video/common/CommonDefs.h>
 #include <com/amazonaws/kinesis/video/common/PlatformUtils.h>
 
+#define ANDROID_BUILD
+
 #define MAX_STRING_CONVERSION_BASE 36
 
 // Max path characters as defined in linux/limits.h
