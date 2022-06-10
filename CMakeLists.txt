@@ -138,7 +138,8 @@ endif()
 target_link_libraries(kvspic ${CMAKE_DL_LIBS} Threads::Threads)
 if(UNIX AND NOT APPLE)
   # rt needed for clock_gettime
-  target_link_libraries(kvspic rt)
+  #target_link_libraries(kvspic rt)
+  target_link_libraries(kvspic)
 endif()
 
 configure_file(
@@ -172,7 +173,8 @@ endif()
 target_link_libraries(kvspicUtils ${CMAKE_DL_LIBS} Threads::Threads)
 if(UNIX AND NOT APPLE)
   # rt needed for clock_gettime
-  target_link_libraries(kvspicUtils rt)
+  target_link_libraries(kvspicUtils)
+  #target_link_libraries(kvspicUtils rt)
 endif()
 
 install(
@@ -220,6 +222,7 @@ if(BUILD_TEST)
   target_link_libraries(kvspic_test ${GTEST_LIBNAME} ${CMAKE_DL_LIBS} Threads::Threads)
   if(UNIX AND NOT APPLE)
     # rt needed for clock_gettime
+    #target_link_libraries(kvspic_test)
     target_link_libraries(kvspic_test rt)
   endif()
 endif()
